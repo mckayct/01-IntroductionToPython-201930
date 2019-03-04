@@ -2,15 +2,15 @@
 Your chance to explore Loops and Turtles!
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
+         Aaron Wilkin, their colleagues, and Colton McKay.
 """
 ########################################################################
-# TODO: 1.
+# DONE: 1.
 #   On Line 5 above, replace  PUT_YOUR_NAME_HERE  with your own name.
 ########################################################################
 
 ########################################################################
-# TODO: 2.
+# DONE: 2.
 #   You should have RUN the  m5e_loopy_turtles  module and READ its code.
 #   (Do so now if you have not already done so.)
 #
@@ -28,3 +28,34 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher,
 #   Don't forget to COMMIT-and-PUSH when you are done with this module.
 #
 ########################################################################
+import rosegraphics as rg
+window = rg.TurtleWindow()
+
+turt1 = rg.SimpleTurtle('turtle')
+turt1.pen = rg.Pen('blue', 2 )
+turt1.speed = 10000
+
+size = 100
+
+for k in range (50):
+    turt1.pen_down()
+    turt1.draw_circle(size)
+    turt1.pen_up()
+    turt1.forward(2)
+    turt1.pen_down()
+    size = size - 5
+
+turt2 = rg.SimpleTurtle('turtle')
+turt2.pen = rg.Pen('red',2)
+turt2.speed = 10000
+
+size = 50
+
+for l in range (25):
+    turt2.pen_down()
+    turt2.draw_regular_polygon(6,25)
+    turt2.pen_up()
+    turt2.backward(3)
+    turt2.pen_down()
+    size = size - 0.5
+##################################################################################
