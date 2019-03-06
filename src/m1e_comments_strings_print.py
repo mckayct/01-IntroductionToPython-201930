@@ -24,6 +24,7 @@
 #   feel free to play with it briefly, then move on to m2.
 #
 ###############################################################################
+import math
 
 
 print('Hello, World')
